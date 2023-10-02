@@ -8,9 +8,7 @@ import store from 'store';
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter
-      basename={process.env.REACT_APP_ENV === 'production' ? '/admin' : ''}
-    >
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </Provider>,
