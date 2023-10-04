@@ -105,7 +105,7 @@ const LoginPage: React.FC = () => {
         <Heading>Админ-панель MW Marketplace</Heading>
         <SubHeading>Пожалуйста, войдите в свой аккаунт</SubHeading>
 
-        <Form onKeyPress={handleFormKeyPress} layout="vertical">
+        <Form onKeyDown={handleFormKeyPress} layout="vertical">
           <Form.Item label="Логин или E-mail">
             <Input
               name="loginOrEmail"

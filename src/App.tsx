@@ -63,7 +63,6 @@ const App = () => {
     <Provider store={store}>
       <ConfigProvider locale={ruRU}>
         <GlobalAppWrapper>
-          {/* @ts-ignore */}
           <AppStyles />
 
           {!isLogged ? (

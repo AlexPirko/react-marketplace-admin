@@ -54,23 +54,12 @@ const request = async (
   // Optional Signal to cancel previous request
   if (body?.signal) options.signal = body.signal;
 
-  return (
-    fetch(
-      process.env.REACT_APP_API_URL + url + convertedParams,
-      options as RequestInit
-    )
-      // .then((res: any) => {
-      //   // Logout app if not authorized
-      //   if (res.status === 401) {
-      //     localStorage.removeItem('MW_TOKEN_CABINET')
-      //     window.location.reload()
-      //   }
-
-      //   return res
-      // })
-      .then((res: Response) => res.json())
-      .catch((err) => console.error(err))
-  );
+  return fetch(
+    process.env.REACT_APP_API_URL + url + convertedParams,
+    options as RequestInit
+  )
+    .then((res: Response) => res.json())
+    .catch((err) => console.error(err));
 };
 
 // Remove empty params from URL to avoid things like param1=&param2=123

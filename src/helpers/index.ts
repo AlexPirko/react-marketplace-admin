@@ -7,7 +7,7 @@ export const formatAmount = (num: number) => {
 // Format numbers, like money etc.
 //
 
-export const formatMoney = (num: number, fillDecimals: boolean = true) => {
+export const formatMoney = (num: number, fillDecimals = true) => {
   let formatted = new Intl.NumberFormat('ru-RU').format(num);
 
   if (fillDecimals && formatted !== '0') {
